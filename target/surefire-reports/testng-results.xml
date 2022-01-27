@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-25T08:57:23 IST" name="Suite" finished-at="2022-01-25T08:58:19 IST" duration-ms="56110">
+    <groups>
+    </groups>
+    <test started-at="2022-01-25T08:57:23 IST" name="Test" finished-at="2022-01-25T08:58:19 IST" duration-ms="56110">
+      <class name="com.stylopay.script.DoDailyScriptExecution">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.stylopay.script.DoDailyScriptExecution@8297b3a]" started-at="2022-01-25T08:57:22 IST" name="beforeSuite" finished-at="2022-01-25T08:57:23 IST" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method signature="executeDailyScript()[pri:0, instance:com.stylopay.script.DoDailyScriptExecution@8297b3a]" started-at="2022-01-25T08:57:23 IST" name="executeDailyScript" finished-at="2022-01-25T08:58:19 IST" duration-ms="56083" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executeDailyScript -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.stylopay.script.DoDailyScriptExecution@8297b3a]" started-at="2022-01-25T08:58:19 IST" name="afterSuite" finished-at="2022-01-25T08:58:19 IST" duration-ms="645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.stylopay.script.DoDailyScriptExecution -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
