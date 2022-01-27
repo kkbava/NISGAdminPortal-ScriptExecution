@@ -6,11 +6,11 @@ import java.util.Properties;
 
 public class Util {
 	
-	private static Properties properties;
+	//private static Properties properties;
 	
 	public static Properties getEnvDetailsProperties() throws IOException {
 		
-		properties = new Properties();
+		Properties properties = new Properties();
 		FileInputStream inputStream = new FileInputStream("./config/envDetails.properties");
 		properties.load(inputStream);
 		
@@ -19,7 +19,7 @@ public class Util {
 	
 	public static String getORValueFromPropertiesFile(String pagename, String key) throws IOException {
 		
-		properties = new Properties();
+		Properties properties = new Properties();
 		String keyValue="";
 		
 		FileInputStream inputStream = new FileInputStream("./objectRepository/" + pagename + ".properties");
@@ -39,7 +39,7 @@ public class Util {
 	
 	public static String getTestDataFromPropertiesFile(String testDataPageName, String key) throws IOException {
 		
-		properties = new Properties();
+		Properties properties = new Properties();
 		String keyValue = "";	
 		
 		FileInputStream inputstream = new FileInputStream("./testData/" + testDataPageName + ".properties");		

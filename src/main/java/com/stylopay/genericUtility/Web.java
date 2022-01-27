@@ -14,14 +14,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.asserts.SoftAssert;
 
 
 public class Web{
 	
-	private static WebDriver driver;
-	private static SoftAssert softAssertion;
-	
+	private static WebDriver driver;	
 
 	private WebDriver invokeChrome() throws IOException {
 		
@@ -46,14 +43,6 @@ public class Web{
 			driver = new Web().invokeChrome();
 		}
 		
-	}
-	
-	public static SoftAssert getSoftAssertion() {
-		return softAssertion;
-	}
-
-	public static void setSoftAssertion(SoftAssert softAssertion) {
-		Web.softAssertion = softAssertion;
 	}
 	
 	public static void explicitWait(WebElement element) {
