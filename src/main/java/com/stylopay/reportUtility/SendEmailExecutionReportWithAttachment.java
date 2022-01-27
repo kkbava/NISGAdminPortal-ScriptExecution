@@ -7,9 +7,11 @@ import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.MultiPartEmail;
 import org.apache.commons.mail.SimpleEmail;
 
+import com.stylopay.genericUtility.Util;
+
 public class SendEmailExecutionReportWithAttachment {
 	
-   public void sendEmailWithAttachment() throws EmailException {
+   public void sendEmailWithAttachment(String message) throws EmailException {
 		
 		try {
 			
@@ -17,21 +19,21 @@ public class SendEmailExecutionReportWithAttachment {
 			
 			// Create the attachment
 			  EmailAttachment attachment = new EmailAttachment();
-			  attachment.setPath("./test-output/emailable-report.html");
+			  attachment.setPath(Util.getEmailConfigProperties().getProperty("fileToBeSent_Path"));
 			  attachment.setDisposition(EmailAttachment.ATTACHMENT);
 			  attachment.setDescription("Error Report Details");
 			  attachment.setName("Error Report Details");
 
 			  // Create the email message
 			  MultiPartEmail email = new MultiPartEmail();
-			  email.setHostName("smtp.gmail.com");
+			  email.setHostName(Util.getEmailConfigProperties().getProperty("setEmailHostName"));
 			  email.setSmtpPort(465);
-			  email.setAuthenticator(new DefaultAuthenticator("testQAMail2022@gmail.com", "Demo@1234"));
+			  email.setAuthenticator(new DefaultAuthenticator(Util.getEmailConfigProperties().getProperty("authenticator_UserName"), Util.getEmailConfigProperties().getProperty("authenticator_Password")));
 				email.setSSLOnConnect(true);
-				email.setFrom("testQAMail2022@gmail.com");
-				email.setSubject("Nium Admin Daily Execution Report");
-				email.setMsg("Error description");
-				email.addTo("testQAMail2022@gmail.com");
+				email.setFrom(Util.getEmailConfigProperties().getProperty("email_From"));
+				email.setSubject(Util.getEmailConfigProperties().getProperty("email_Subject"));
+				email.setMsg(message);
+				email.addTo(Util.getEmailConfigProperties().getProperty("email_AddTo"));
 
 			  // add the attachment
 			  email.attach(attachment);

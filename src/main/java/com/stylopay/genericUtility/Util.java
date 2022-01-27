@@ -56,5 +56,14 @@ public class Util {
 		
 		return keyValue;
 	}
+	
+	public static Properties getEmailConfigProperties() throws IOException {
+		
+		Properties properties = new Properties();
+		FileInputStream inputStream = new FileInputStream("./config/emailConfig.properties");
+		properties.load(inputStream);
+		
+		return properties;		
+	}
 
 }
